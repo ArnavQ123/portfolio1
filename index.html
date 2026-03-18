@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arnav Khandelwal – Computer Science Student & Data Science Enthusiast. Portfolio showcasing projects, skills, and achievements.">
+    <title>Arnav Khandelwal | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body id="top">
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <img src="images/profile.jpeg" alt="Arnav Khandelwal" class="nav-profile-img">
+                Arnav Khandelwal
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" data-text="About">About</a></li>
+                <li><a href="#skills" data-text="Skills">Skills</a></li>
+                <li><a href="#projects" data-text="Projects">Projects</a></li>
+                <li><a href="#achievements" data-text="Achievements">Achievements</a></li>
+                <li><a href="#certificates" data-text="Certificates">Certificates</a></li>
+                <li><a href="#education" data-text="Education">Education</a></li>
+                <li><a href="#contact" data-text="Contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <section class="hero" id="hero">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+        <div class="hero-wrapper">
+        <div class="hero-content">
+            <div class="hero-badge animate-item">
+                <span class="status-dot"></span> Available for Opportunities
+            </div>
+            <p class="hero-greeting animate-item">Hello, I'm</p>
+            <h1 class="hero-name animate-item">
+                <span class="name-line">Arnav</span>
+                <span class="name-line">Khandelwal</span>
+            </h1>
+            <h2 class="hero-title animate-item">
+                Computer Science Student | <span class="gradient-text typing-text">Data Science Enthusiast</span>
+            </h2>
+            <p class="hero-description animate-item">
+                Passionate about turning ideas into reality through code. I love tackling complex problems,
+                exploring AI-driven solutions, and building applications that make a difference. Always
+                learning, always building.
+            </p>
+            <div class="hero-buttons animate-item">
+                <a href="#projects" class="btn btn-primary glow-btn">
+                    <i class="fas fa-rocket"></i> View Projects
+                    <span class="btn-shine"></span>
+                </a>
+                <a href="resume.pdf" class="btn btn-outline" download="resume.pdf">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+            <div class="hero-socials animate-item">
+                <a href="https://github.com/ArnavQ123" target="_blank" aria-label="GitHub" class="social-icon">
+                    <i class="fab fa-github"></i>
+                    <span class="social-tooltip">GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/arnavkhandelwal10/" target="_blank" aria-label="LinkedIn" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span class="social-tooltip">LinkedIn</span>
+                </a>
+                <a href="mailto:arnavkhandelwal.143@gmail.com" aria-label="Email" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                    <span class="social-tooltip">Email</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-image-wrap animate-item">
+            <img src="images/profile.jpeg" alt="Arnav Khandelwal Profile Picture" class="hero-image" loading="lazy">
+        </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header animate-item">
+                <span class="section-tag"><i class="fas fa-user"></i> Introduction</span>
+                <h2 class="section-title">
+                    <span class="gradient-text">About</span> Me
+                </h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text animate-item">
+                    <div class="about-image-wrap" data-tilt>
+                        <img src="images/gem.png" alt="Arnav Khandelwal" class="about-image" loading="lazy" onerror="this.onerror=null;this.src='images/about_developer.png';">
+                    </div>
+                    <p>
+                        I am a <strong>Computer Science</strong> student passionate about software development,
+                        artificial intelligence, and data science. I enjoy solving real-world problems through
+                        technology and continuously learning new tools and frameworks.
+                    </p>
+                    <p>
+                        My journey in tech has led me to explore diverse domains — from building interactive web
+                        applications to diving deep into machine learning algorithms. I thrive in collaborative
+                        environments and love contributing to projects that push boundaries.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="250">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Problems Solved</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="4">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Languages</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-cards">
+                    <div class="about-card animate-item" data-tilt>
+                        <div class="card-glow"></div>
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Data Science</h3>
+                        <p>Extracting insights from data using statistical analysis and ML models.</p>
+                    </div>
+                    <div class="about-card animate-item" data-tilt>
+                        <div class="card-glow"></div>
+                        <i class="fas fa-code"></i>
+                        <h3>Software Development</h3>
+                        <p>Building robust and scalable applications with clean, efficient code.</p>
+                    </div>
+                    <div class="about-card animate-item" data-tilt>
+                        <div class="card-glow"></div>
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Problem Solving</h3>
+                        <p>Breaking complex problems into elegant, optimized solutions.</p>
+                    </div>
+                    <div class="about-card animate-item" data-tilt>
+                        <div class="card-glow"></div>
+                        <i class="fas fa-brain"></i>
+                        <h3>Artificial Intelligence</h3>
+                        <p>Exploring neural networks, NLP, and computer vision technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header animate-item">
+                <span class="section-tag"><i class="fas fa-code"></i> Expertise</span>
+                <h2 class="section-title">
+                    My <span class="gradient-text">Skills</span>
+                </h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category animate-item">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <span class="skill-badge"><i class="fab fa-cuttlefish"></i> C++</span>
+                        <span class="skill-badge"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-badge"><i class="fab fa-java"></i> Java</span>
+                        <span class="skill-badge"><i class="fab fa-js-square"></i> JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category animate-item">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrap"><i class="fas fa-globe"></i></div>
+                        <h3>Web Technologies</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <span class="skill-badge"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="skill-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span class="skill-badge"><i class="fab fa-js-square"></i> JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category animate-item">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrap"><i class="fas fa-tools"></i></div>
+                        <h3>Tools &amp; Platforms</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <span class="skill-badge"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-badge"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="skill-badge"><i class="fas fa-code"></i> VS Code</span>
+                    </div>
+                </div>
+                <div class="skill-category animate-item">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrap"><i class="fas fa-users"></i></div>
+                        <h3>Soft Skills</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <span class="skill-badge"><i class="fas fa-puzzle-piece"></i> Problem Solving</span>
+                        <span class="skill-badge"><i class="fas fa-user-tie"></i> Leadership</span>
+                        <span class="skill-badge"><i class="fas fa-sync-alt"></i> Adaptability</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header animate-item">
+                <span class="section-tag"><i class="fas fa-folder-open"></i> Portfolio</span>
+                <h2 class="section-title">
+                    My <span class="gradient-text">Projects</span>
+                </h2>
+                <p class="section-subtitle">Things I've built</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card animate-item">
+                    <div class="project-image">
+                        <!-- Using a placeholder related to environment/farming based on existing filenames -->
+                        <img src="images/sustainable_farming.png" alt="Drought Awareness and Environmental Impact Website" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&auto=format&fit=crop'">
+                        <div class="project-overlay">
+                            <a href="https://github.com/ArnavQ123/che110/tree/main" class="btn btn-sm btn-code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                            <a href="javascript:void(0)" class="btn btn-sm btn-demo" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="card-spotlight"></div>
+                        <div class="project-header-row">
+                            <h3 class="project-title-flex">Drought Awareness and Environmental Impact Website</h3>
+                            <div class="project-meta-flex">
+                                <a href="https://github.com/ArnavQ123/che110/tree/main" target="_blank">GitHub</a>
+                                <span>Sep '25 – Oct '25</span>
+                            </div>
+                        </div>
+                        <ul class="project-points">
+                            <li class="project-point">Developed a website related to environmental science.</li>
+                            <li class="project-point">Included visuals, facts, and preventive measures to educate students and the community.</li>
+                            <li class="project-point">Designed the site to spread awareness about water conservation and environmental protection.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="project-tech-label">Tech:</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card animate-item">
+                    <div class="project-image">
+                        <img src="images/crime_dashboard.png" alt="Crime Review Analysis Dashboard Using Power Bi" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/ArnavQ123/Crime-Review-Analysis-Power-bi" class="btn btn-sm btn-code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                            <a href="javascript:void(0)" class="btn btn-sm btn-demo" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="card-spotlight"></div>
+                        <div class="project-header-row">
+                            <h3 class="project-title-flex">Crime Review Analysis Dashboard Using Power Bi</h3>
+                            <div class="project-meta-flex">
+                                <a href="https://github.com/ArnavQ123/Crime-Review-Analysis-Power-bi" target="_blank">GitHub</a>
+                                <span>Nov '25 – Dec '25</span>
+                            </div>
+                        </div>
+                        <ul class="project-points">
+                            <li class="project-point">Developed an interactive Power BI dashboard to analyze and visualize regional crime patterns and yearly trends.</li>
+                            <li class="project-point">Implemented advanced data filtering and drill-down features to explore crime rates by category, location, and severity.</li>
+                            <li class="project-point">Identified high-risk hotspots and provided actionable insights for predictive safety measures and community awareness.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="project-tech-label">Tech:</span>
+                            <span>Power BI</span>
+                            <span>Data Analysis</span>
+                            <span>Visualization</span>
+                            <span>Excel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card animate-item">
+                    <div class="project-image">
+                        <img src="images/expense_sharing.png" alt="SmartSplit AI – Automated Expense Sharing System" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/ArnavQ123/expense-spliter" class="btn btn-sm btn-code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/ArnavQ123/expense-spliter" class="btn btn-sm btn-demo" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="card-spotlight"></div>
+                        <div class="project-header-row">
+                            <h3 class="project-title-flex">SmartSplit AI – Automated Expense Sharing System</h3>
+                            <div class="project-meta-flex">
+                                <a href="https://github.com/ArnavQ123/expense-spliter" target="_blank">GitHub</a>
+                                <span>Mar '24 – Apr '24</span>
+                            </div>
+                        </div>
+                        <ul class="project-points">
+                            <li class="project-point">Developed an AI-based system that automatically splits group expenses fairly among members.</li>
+                            <li class="project-point">Implemented features for bill scanning, expense categorization, and real-time calculations.</li>
+                            <li class="project-point">Used AI/ML logic to detect individual contributions and minimize manual entry.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="project-tech-label">Tech:</span>
+                            <span>Python</span>
+                            <span>Streamlit</span>
+                            <span>On-Demand AI API</span>
+                            <span>Pandas</span>
+                            <span>REST API</span>
+                            <span>JSON</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section achievements" id="achievements">
+        <div class="container">
+            <div class="section-header animate-item">
+                <span class="section-tag"><i class="fas fa-star"></i> Milestones</span>
+                <h2 class="section-title">
+                    My <span class="gradient-text">Achievements</span>
+                </h2>
+                <p class="section-subtitle">Milestones I'm proud of</p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card animate-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="counter" data-target="250">250</h3><span class="achievement-plus">+</span>
+                    <p>Problems Solved on LeetCode</p>
+                    <div class="achievement-glow"></div>
+                    <div class="achievement-ring"></div>
+                </div>
+                <div class="achievement-card animate-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Top 300</h3>
+                    <p>Rank in GeeksforGeeks Contest</p>
+                    <div class="achievement-glow"></div>
+                    <div class="achievement-ring"></div>
+                </div>
+                <div class="achievement-card animate-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Web-A-Thon</h3>
+                    <p>Active Participant & Contributor</p>
+                    <div class="achievement-glow"></div>
+                    <div class="achievement-ring"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section certificates" id="certificates">
+        <div class="container">
+            <div class="section-header animate-item">
+                <span class="section-tag"><i class="fas fa-certificate"></i> Credentials</span>
+                <h2 class="section-title">
+                    My <span class="gradient-text">Certificates</span>
+                </h2>
+                <p class="section-subtitle">Professional certifications and courses</p>
+            </div>
+            <div class="certificates-grid">
+                <a href="oracle_certified_professional.pdf" target="_blank" class="certificate-card animate-item">
+                    <div class="certificate-image">
+                        <img src="images/oracle_cert.jpg" alt="Oracle Certified Professional" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'certificate-placeholder\'><i class=\'fas fa-database\'></i></div>';">
+                    </div>
+                    <div class="certificate-info">
+                        <div class="certificate-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certificate-text">
+                            <h3>Oracle Certified Professional</h3>
+                            <p class="certificate-issuer">Oracle</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.freecodecamp.org/certification/arnavkhandelwal/responsive-web-design" target="_blank" class="certificate-card animate-item">
+                    <div class="certificate-image">
+                        <img src="images/fcc_certificate.png" alt="Responsive Web Design Certificate" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'certificate-placeholder\'><i class=\'fab fa-free-code-camp\'></i></div>';">
+                    </div>
+                    <div class="certificate-info">
+                        <div class="certificate-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certificate-text">
+                            <h3>Responsive Web Design</h3>
+                            <p class="certificate-issuer">freeCodeCamp</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="cloud_computing_certificate.pdf" target="_blank" class="certificate-card animate-item">
+                    <div class="certificate-image">
+                        <img src="images/cloud_cert.jpg" alt="Cloud Computing Certificate" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'certificate-placeholder\'><i class=\'fas fa-cloud\'></i></div>';">
+                    </div>
+                    <div class="certificate-info">
+                        <div class="certificate-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certificate-text">
+                            <h3>Cloud Computing</h3>
+                            <p class="certificate-issuer">NPTEL – IIT Madras</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="web_a_thon_certificate.pdf" target="_blank" class="certificate-card animate-item">
+                    <div class="certificate-image">
+                        <img src="images/webathon_cert.jpg" alt="Web-A-Thon 24 Hour Hackathon" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'certificate-placeholder\'><i class=\'fas fa-laptop-code\'></i></div>';">
+                    </div>
+                    <div class="certificate-info">
+                        <div class="certificate-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="certificate-text">
+                            <h3>Web-A-Thon 24 Hour Hackathon</h3>
+                            <p class="certificate-issuer">Hackathon</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="section-header animate-item">
+                <span class="section-tag"><i class="fas fa-university"></i> Academics</span>
+                <h2 class="section-title">
+                    <span class="gradient-text">Education</span>
+                </h2>
+                <p class="section-subtitle">Academic background</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-item">
+                    <div class="timeline-dot">
+                        <div class="timeline-dot-ring"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i> Aug 2023 – Present
+                        </div>
+                        <h3>Lovely Professional University</h3>
+                        <h4>Bachelor of Technology – Computer Science and Engineering</h4>
+                        <p class="timeline-meta">
+                            <span><i class="fas fa-chart-line"></i> CGPA: 7.00</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Punjab, India</span>
+                        </p>
+                        <p>
+                            Studying core CS subjects including Data Structures, Algorithms, Database
+                            Management, Operating Systems, and Machine Learning. Actively participating
+                            in coding contests and hackathons.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-item">
+                    <div class="timeline-dot">
+                        <div class="timeline-dot-ring"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i> Apr 2021 – Mar 2023
+                        </div>
+                        <h3>St. Joseph Senior Secondary School</h3>
+                        <h4>Intermediate</h4>
+                        <p class="timeline-meta">
+                            <span><i class="fas fa-percentage"></i> 70%</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Puranpur, Uttar Pradesh</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-item">
+                    <div class="timeline-dot">
+                        <div class="timeline-dot-ring"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i> Apr 2020 – Mar 2021
+                        </div>
+                        <h3>St. Joseph Senior Secondary School</h3>
+                        <h4>Matriculation</h4>
+                        <p class="timeline-meta">
+                            <span><i class="fas fa-percentage"></i> 80%</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Puranpur, Uttar Pradesh</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header animate-item">
+                <span class="section-tag"><i class="fas fa-envelope"></i> Connect</span>
+                <h2 class="section-title">
+                    Get In <span class="gradient-text">Touch</span>
+                </h2>
+                <p class="section-subtitle">Let's work together</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info animate-item">
+                    <div class="contact-item">
+                        <div class="contact-icon-wrap">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:arnavkhandelwal.143@gmail.com">arnavkhandelwal.143@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon-wrap">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+918449055078">+91-8449055078</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon-wrap">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/ArnavQ123" target="_blank">github.com/ArnavQ123</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon-wrap">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/arnavkhandelwal10/" target="_blank">linkedin.com/in/arnavkhandelwal10</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form animate-item" id="contactForm">
+
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <label for="name">Name</label>
+                        <div class="form-highlight"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <label for="email">Email</label>
+                        <div class="form-highlight"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <label for="message">Message</label>
+                        <div class="form-highlight"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary glow-btn btn-full">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                        <span class="btn-shine"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <a href="#hero" class="footer-logo"><span class="logo-bracket">&lt;</span>AK <span class="logo-bracket">/&gt;</span></a>
+                    <p class="footer-text">Built with <span class="heart">❤️</span> by Arnav Khandelwal</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/ArnavQ123" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/arnavkhandelwal10/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:arnavkhandelwal.143@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
