@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const form = document.getElementById('contactForm');
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const name    = form.querySelector('#name').value.trim();
         const email   = form.querySelector('#email').value.trim();
@@ -323,18 +323,17 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         btn.disabled = true;
 
-        const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-        const body = encodeURIComponent(
-            `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-        );
-        const mailtoLink = `mailto:arnavkhandelwal.143@gmail.com?subject=${subject}&body=${body}`;
+        // FormSubmit blocks requests from file:// pages. Use mailto fallback locally.
+        if (window.location.protocol === 'file:') {
+            const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+            const body = encodeURIComponent(
+                `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+            );
+            window.location.href = `mailto:arnavkhandelwal1er@gmail.com?subject=${subject}&body=${body}`;
 
-        window.location.href = mailtoLink;
-
-        setTimeout(() => {
             btn.innerHTML = '<i class="fas fa-check"></i> Email Client Opened!';
             btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-            showFormMessage('Your email client has been opened with the message. Please hit Send!', 'success');
+            showFormMessage('Local file mode detected. Your email client was opened. Please press Send there.', 'success');
 
             setTimeout(() => {
                 form.reset();
@@ -342,7 +341,45 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.disabled = false;
                 btn.style.background = '';
             }, 4000);
-        }, 500);
+            return;
+        }
+
+        try {
+            const response = await fetch('https://formsubmit.co/ajax/arnavkhandelwal1er@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    message,
+                    _subject: `Portfolio Contact from ${name}`,
+                    _captcha: 'false'
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to send message');
+            }
+
+            btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+            btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+            showFormMessage('Message sent successfully. Thank you for reaching out!', 'success');
+
+            setTimeout(() => {
+                form.reset();
+                btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                btn.disabled = false;
+                btn.style.background = '';
+            }, 4000);
+        } catch (error) {
+            btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+            btn.disabled = false;
+            btn.style.background = '';
+            showFormMessage('Unable to send right now. Please try again in a moment.', 'error');
+        }
     });
 
     function showFormMessage(msg, type) {
